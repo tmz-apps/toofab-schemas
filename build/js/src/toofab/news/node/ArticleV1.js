@@ -19,7 +19,6 @@ import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin
 import TrinitiCuratorTeaserableV1Mixin from '@triniti/schemas/triniti/curator/mixin/teaserable/TeaserableV1Mixin';
 import TrinitiNewsArticleV1Mixin from '@triniti/schemas/triniti/news/mixin/article/ArticleV1Mixin';
 import TrinitiNewsArticleV1Trait from '@triniti/schemas/triniti/news/mixin/article/ArticleV1Trait';
-import TrinitiNewsHeadlineFragmentsV1Mixin from '@triniti/schemas/triniti/news/mixin/headline-fragments/HeadlineFragmentsV1Mixin';
 import TrinitiNotifyHasNotificationsV1Mixin from '@triniti/schemas/triniti/notify/mixin/has-notifications/HasNotificationsV1Mixin';
 import TrinitiPeopleHasPeopleV1Mixin from '@triniti/schemas/triniti/people/mixin/has-people/HasPeopleV1Mixin';
 import TrinitiTaxonomyCategorizableV1Mixin from '@triniti/schemas/triniti/taxonomy/mixin/categorizable/CategorizableV1Mixin';
@@ -51,7 +50,6 @@ export default class ArticleV1 extends Message {
         TrinitiCommonSwipeableV1Mixin.create(),
         TrinitiCommonThemeableV1Mixin.create(),
         TrinitiCuratorTeaserableV1Mixin.create(),
-        TrinitiNewsHeadlineFragmentsV1Mixin.create(),
         TrinitiNotifyHasNotificationsV1Mixin.create(),
         TrinitiPeopleHasPeopleV1Mixin.create(),
         TrinitiTaxonomyCategorizableV1Mixin.create(),

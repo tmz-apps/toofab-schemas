@@ -1340,7 +1340,6 @@
         'triniti:news:mixin:article-stats:v1' => [410],
         'triniti:news:mixin:article:v1' => [409],
         'triniti:news:mixin:collect-article-stats:v1' => [381],
-        'triniti:news:mixin:headline-fragments:v1' => [409],
         'triniti:news:mixin:remove-article-slotting:v1' => [389],
         'triniti:news:mixin:search-articles-request:v1' => [415],
         'triniti:news:mixin:search-articles-response:v1' => [416],

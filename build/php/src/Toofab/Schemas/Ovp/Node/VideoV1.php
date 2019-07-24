@@ -3,9 +3,7 @@
 namespace Toofab\Schemas\Ovp\Node;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Expirable\ExpirableV1 as GdbotsNcrExpirableV1;
@@ -72,11 +70,7 @@ final class VideoV1 extends AbstractMessage implements
     protected static function defineSchema()
     {
         return new Schema('pbj:toofab:ovp:node:video:1-0-0', __CLASS__,
-            [
-                Fb::create('episode_highlights', T\StringType::create())
-                    ->asAList()
-                    ->build(),
-            ],
+            [],
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiOvpVideoV1Mixin::create(),

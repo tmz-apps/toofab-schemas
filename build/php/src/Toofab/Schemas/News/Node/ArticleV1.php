@@ -36,8 +36,6 @@ use Triniti\Schemas\Curator\Mixin\Teaserable\TeaserableV1Mixin as TrinitiCurator
 use Triniti\Schemas\News\Mixin\Article\ArticleV1 as TrinitiNewsArticleV1;
 use Triniti\Schemas\News\Mixin\Article\ArticleV1Mixin as TrinitiNewsArticleV1Mixin;
 use Triniti\Schemas\News\Mixin\Article\ArticleV1Trait as TrinitiNewsArticleV1Trait;
-use Triniti\Schemas\News\Mixin\HeadlineFragments\HeadlineFragmentsV1 as TrinitiNewsHeadlineFragmentsV1;
-use Triniti\Schemas\News\Mixin\HeadlineFragments\HeadlineFragmentsV1Mixin as TrinitiNewsHeadlineFragmentsV1Mixin;
 use Triniti\Schemas\Notify\Mixin\HasNotifications\HasNotificationsV1 as TrinitiNotifyHasNotificationsV1;
 use Triniti\Schemas\Notify\Mixin\HasNotifications\HasNotificationsV1Mixin as TrinitiNotifyHasNotificationsV1Mixin;
 use Triniti\Schemas\People\Mixin\HasPeople\HasPeopleV1 as TrinitiPeopleHasPeopleV1;
@@ -66,7 +64,6 @@ final class ArticleV1 extends AbstractMessage implements
     TrinitiCommonSwipeableV1,
     TrinitiCommonThemeableV1,
     TrinitiCuratorTeaserableV1,
-    TrinitiNewsHeadlineFragmentsV1,
     TrinitiNotifyHasNotificationsV1,
     TrinitiPeopleHasPeopleV1,
     TrinitiTaxonomyCategorizableV1,
@@ -99,7 +96,6 @@ final class ArticleV1 extends AbstractMessage implements
                 TrinitiCommonSwipeableV1Mixin::create(),
                 TrinitiCommonThemeableV1Mixin::create(),
                 TrinitiCuratorTeaserableV1Mixin::create(),
-                TrinitiNewsHeadlineFragmentsV1Mixin::create(),
                 TrinitiNotifyHasNotificationsV1Mixin::create(),
                 TrinitiPeopleHasPeopleV1Mixin::create(),
                 TrinitiTaxonomyCategorizableV1Mixin::create(),

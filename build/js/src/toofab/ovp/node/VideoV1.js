@@ -1,5 +1,4 @@
 // @link https://schemas.toofab.com/json-schema/toofab/ovp/node/video/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
 import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
@@ -10,7 +9,6 @@ import GdbotsNcrSluggableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/sluggabl
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
 import TrinitiBoostSponsorableV1Mixin from '@triniti/schemas/triniti/boost/mixin/sponsorable/SponsorableV1Mixin';
 import TrinitiCommonAdvertisingV1Mixin from '@triniti/schemas/triniti/common/mixin/advertising/AdvertisingV1Mixin';
 import TrinitiCommonSeoV1Mixin from '@triniti/schemas/triniti/common/mixin/seo/SeoV1Mixin';
@@ -32,11 +30,7 @@ export default class VideoV1 extends Message {
    */
   static defineSchema() {
     return new Schema('pbj:toofab:ovp:node:video:1-0-0', VideoV1,
-      [
-        Fb.create('episode_highlights', T.StringType.create())
-          .asAList()
-          .build(),
-      ],
+      [],
       [
         GdbotsNcrNodeV1Mixin.create(),
         TrinitiOvpVideoV1Mixin.create(),
