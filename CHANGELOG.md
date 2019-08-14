@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.1.1
+* Use `gdbots/schemas` v1.5.13.
+* Use `triniti/schemas` v1.0.3.
+
+
 ## v0.1.0
 * __Add Schemas:__
   * __toofab:apollo__

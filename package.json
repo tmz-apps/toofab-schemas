@@ -1,6 +1,6 @@
 {
   "name": "@toofab/schemas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Schemas for all Toofab apps and components.",
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.5.12",
-    "@triniti/schemas": "^1.0.2"
+    "@gdbots/schemas": "^1.5.13",
+    "@triniti/schemas": "^1.0.3"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -53,7 +53,7 @@
     "lodash-es": "^4.17.15",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.1",
     "tape": "^4.11.0",
     "utf8": "^3.0.0",
     "uuid": "^3.3.0"
