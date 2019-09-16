@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.1.4
+* Use `triniti/schemas` v1.0.6.
+* __Add Schemas:__
+  * `toofab:curator:node:asset-teaser`
+
+
 ## v0.1.3
 * Use `triniti/schemas` v1.0.5.
 

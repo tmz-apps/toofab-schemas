@@ -244,6 +244,7 @@ import '@toofab/schemas/toofab/curator/event/WidgetUpdatedV1';
 import '@toofab/schemas/toofab/curator/node/AdWidgetV1';
 import '@toofab/schemas/toofab/curator/node/AlertWidgetV1';
 import '@toofab/schemas/toofab/curator/node/ArticleTeaserV1';
+import '@toofab/schemas/toofab/curator/node/AssetTeaserV1';
 import '@toofab/schemas/toofab/curator/node/BlogrollWidgetV1';
 import '@toofab/schemas/toofab/curator/node/CarouselWidgetV1';
 import '@toofab/schemas/toofab/curator/node/CategoryTeaserV1';
