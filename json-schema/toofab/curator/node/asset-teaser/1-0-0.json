@@ -1,12 +1,12 @@
 {
-  "id": "https://schemas.toofab.com/json-schema/toofab/curator/node/link-teaser/1-0-0.json#",
+  "id": "https://schemas.toofab.com/json-schema/toofab/curator/node/asset-teaser/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:toofab:curator:node:link-teaser:1-0-0"
+      "default": "pbj:toofab:curator:node:asset-teaser:1-0-0"
     },
     "_id": {
       "type": "string",
@@ -253,30 +253,20 @@
         "rule": "single"
       }
     },
-    "link_url": {
+    "target_ref": {
       "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the target teaserable node this teaser is bound to.",
       "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
+        "type": "identifier",
+        "rule": "single"
       }
     },
-    "partner_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+    "sync_with_target": {
+      "type": "boolean",
+      "description": "When true this teaser will automatically be updated to match the target it is bound to whenever the target is modified.",
       "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
-      }
-    },
-    "partner_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
+        "type": "boolean",
         "rule": "single"
       }
     },
@@ -514,7 +504,7 @@
   "required": [
     "_schema",
     "_id",
-    "link_url"
+    "target_ref"
   ],
   "additionalProperties": false
 }
