@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.1.5
+* Use `triniti/schemas` v1.0.7.
+* __Add Schemas:__
+  * `toofab:canvas:block:divider-block`
+  * `toofab:curator:command:remove-teaser-slotting`
+  * `toofab:curator:event:teaser-slotting-removed`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `toofab:canvas:node:page`
+    * Add mixin `triniti:curator:mixin:has-related-teasers:v1`
+  * `toofab:news:node:article`
+    * Add mixin `triniti:curator:mixin:has-related-teasers:v1`
+  * `toofab:ovp:node:video`
+    * Add mixin `triniti:curator:mixin:has-related-teasers:v1`
+
+
 ## v0.1.4
 * Use `triniti/schemas` v1.0.6.
 * __Add Schemas:__
