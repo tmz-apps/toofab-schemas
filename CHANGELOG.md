@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.2.2
+* Use `triniti/schemas` v1.1.2.
+* __Add Schemas:__
+  * `tmz:canvas:block:spotify-embed-block`
+  * `tmz:canvas:block:tiktok-embed-block`
+
+
 ## v0.2.1
 * Use `triniti/schemas` v1.1.1.
 
