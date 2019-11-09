@@ -487,6 +487,14 @@
         "rule": "list"
       }
     },
+    "medialive_channel_arn": {
+      "type": "string",
+      "pattern": "^[\\w:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "tags": {
       "type": "object",
       "patternProperties": {
