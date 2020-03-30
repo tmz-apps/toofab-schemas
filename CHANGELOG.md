@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.2.6
+* Use `gdbots/schemas` v1.6.5.
+* Use `triniti/schemas` v1.1.8.
+* __Add Schemas:__
+  * `toofab:canvas:block:tumblr-post-block`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `toofab:ovp:node:video`
+    * Remove mixin `triniti:ovp.medialive:mixin:has-channel:v1`
+
+
 ## v0.2.5
 * Use `triniti/schemas` v1.1.6.
 
