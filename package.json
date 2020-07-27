@@ -1,6 +1,6 @@
 {
   "name": "@toofab/schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schemas for all Toofab apps and components.",
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "^1.6.5",
-    "@triniti/schemas": "^1.1.9"
+    "@gdbots/schemas": "^1.6.6",
+    "@triniti/schemas": "^1.1.11"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
