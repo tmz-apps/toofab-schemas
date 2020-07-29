@@ -4,6 +4,13 @@
 ## v1.0.1
 * Use `gdbots/schemas` v1.6.6.
 * Use `triniti/schemas` v1.1.11.
+* __Modify Schemas:__
+  * `toofab:curator:node:gallery` patch revision `1-0-1`
+    * Add mixin `gdbots:common:mixin:labelable:v1`
+  * `toofab:news:node:article` patch revision `1-0-1`
+    * Add mixin `gdbots:common:mixin:labelable:v1`
+  * `toofab:ovp:node:video` patch revision `1-0-1`
+    * Add mixin `gdbots:common:mixin:labelable:v1`
 
 
 ## v1.0.0
