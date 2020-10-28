@@ -1,9 +1,11 @@
 <?php
-// @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-1.json#
+// @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-2.json#
 namespace Toofab\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
+use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1 as GdbotsCommonLabelableV1;
 use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1Mixin as GdbotsCommonLabelableV1Mixin;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
@@ -19,6 +21,7 @@ use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1 as GdbotsNcrPublishableV1
 use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1Mixin as GdbotsNcrPublishableV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1 as GdbotsNcrSluggableV1;
 use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1Mixin as GdbotsNcrSluggableV1Mixin;
+use Toofab\Schemas\Curator\Enum\GalleryLayout;
 use Triniti\Schemas\Boost\Mixin\Sponsorable\SponsorableV1 as TrinitiBoostSponsorableV1;
 use Triniti\Schemas\Boost\Mixin\Sponsorable\SponsorableV1Mixin as TrinitiBoostSponsorableV1Mixin;
 use Triniti\Schemas\Common\Mixin\Advertising\AdvertisingV1 as TrinitiCommonAdvertisingV1;
@@ -72,8 +75,13 @@ final class GalleryV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:toofab:curator:node:gallery:1-0-1', __CLASS__,
-            [],
+        return new Schema('pbj:toofab:curator:node:gallery:1-0-2', __CLASS__,
+            [
+                Fb::create('gallery_layout', T\StringEnumType::create())
+                    ->withDefault(GalleryLayout::CAROUSEL())
+                    ->className(GalleryLayout::class)
+                    ->build(),
+            ],
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiCuratorGalleryV1Mixin::create(),

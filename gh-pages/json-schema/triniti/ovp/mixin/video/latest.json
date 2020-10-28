@@ -1,5 +1,5 @@
 {
-  "id": "https://schemas.toofab.com/json-schema/triniti/ovp/mixin/video/1-0-5.json#",
+  "id": "https://schemas.toofab.com/json-schema/triniti/ovp/mixin/video/1-0-4.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -275,14 +275,6 @@
       "description": "A credit is a short string used to publicly acknowledge the source/creator of the video. e.g. \"Fox News\", \"CNN\".",
       "pbj": {
         "type": "string",
-        "rule": "single"
-      }
-    },
-    "recommendations_enabled": {
-      "type": "boolean",
-      "default": true,
-      "pbj": {
-        "type": "boolean",
         "rule": "single"
       }
     },
