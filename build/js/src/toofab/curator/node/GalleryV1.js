@@ -35,7 +35,7 @@ export default class GalleryV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:toofab:curator:node:gallery:1-0-2', GalleryV1,
       [
-        Fb.create('gallery_layout', T.StringEnumType.create())
+        Fb.create('layout', T.StringEnumType.create())
           .withDefault(GalleryLayout.CAROUSEL)
           .classProto(GalleryLayout)
           .build(),

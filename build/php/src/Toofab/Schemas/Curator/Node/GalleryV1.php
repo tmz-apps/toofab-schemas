@@ -77,7 +77,7 @@ final class GalleryV1 extends AbstractMessage implements
     {
         return new Schema('pbj:toofab:curator:node:gallery:1-0-2', __CLASS__,
             [
-                Fb::create('gallery_layout', T\StringEnumType::create())
+                Fb::create('layout', T\StringEnumType::create())
                     ->withDefault(GalleryLayout::CAROUSEL())
                     ->className(GalleryLayout::class)
                     ->build(),

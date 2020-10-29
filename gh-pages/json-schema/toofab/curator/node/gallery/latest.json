@@ -540,7 +540,7 @@
         "format": "hashtag"
       }
     },
-    "gallery_layout": {
+    "layout": {
       "type": "string",
       "default": "carousel",
       "enum": [
