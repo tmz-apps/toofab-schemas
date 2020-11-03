@@ -1,6 +1,6 @@
 // @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import GalleryLayout from '@toofab/schemas/toofab/curator/enums/GalleryLayout';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
@@ -35,9 +35,11 @@ export default class GalleryV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:toofab:curator:node:gallery:1-0-2', GalleryV1,
       [
-        Fb.create('layout', T.StringEnumType.create())
-          .withDefault(GalleryLayout.CAROUSEL)
-          .classProto(GalleryLayout)
+        /*
+         * Visual layout for the page. e.g. "carousel", "list".
+         */
+        Fb.create('layout', T.StringType.create())
+          .format(Format.SLUG)
           .build(),
       ],
       [

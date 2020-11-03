@@ -3,6 +3,7 @@
 namespace Toofab\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
@@ -21,7 +22,6 @@ use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1 as GdbotsNcrPublishableV1
 use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1Mixin as GdbotsNcrPublishableV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1 as GdbotsNcrSluggableV1;
 use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1Mixin as GdbotsNcrSluggableV1Mixin;
-use Toofab\Schemas\Curator\Enum\GalleryLayout;
 use Triniti\Schemas\Boost\Mixin\Sponsorable\SponsorableV1 as TrinitiBoostSponsorableV1;
 use Triniti\Schemas\Boost\Mixin\Sponsorable\SponsorableV1Mixin as TrinitiBoostSponsorableV1Mixin;
 use Triniti\Schemas\Common\Mixin\Advertising\AdvertisingV1 as TrinitiCommonAdvertisingV1;
@@ -77,9 +77,11 @@ final class GalleryV1 extends AbstractMessage implements
     {
         return new Schema('pbj:toofab:curator:node:gallery:1-0-2', __CLASS__,
             [
-                Fb::create('layout', T\StringEnumType::create())
-                    ->withDefault(GalleryLayout::CAROUSEL())
-                    ->className(GalleryLayout::class)
+                /*
+                 * Visual layout for the page. e.g. "carousel", "list".
+                 */
+                Fb::create('layout', T\StringType::create())
+                    ->format(Format::SLUG())
                     ->build(),
             ],
             [

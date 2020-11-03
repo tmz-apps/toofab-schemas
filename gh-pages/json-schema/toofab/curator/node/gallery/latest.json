@@ -542,15 +542,14 @@
     },
     "layout": {
       "type": "string",
-      "default": "carousel",
-      "enum": [
-        "unknown",
-        "carousel",
-        "list"
-      ],
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Visual layout for the page. e.g. \"carousel\", \"list\".",
       "pbj": {
-        "type": "string-enum",
-        "rule": "single"
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
       }
     }
   },

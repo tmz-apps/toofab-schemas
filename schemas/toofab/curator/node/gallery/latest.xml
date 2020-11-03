@@ -5,9 +5,10 @@
 
 <schema id="pbj:toofab:curator:node:gallery:1-0-2">
   <fields>
-    <field name="layout" type="string-enum">
-      <default>carousel</default>
-      <enum id="toofab:curator:gallery-layout"/>
+    <field name="layout" type="string" format="slug">
+      <description>
+        Visual layout for the page. e.g. "carousel", "list".
+      </description>
     </field>
   </fields>
 
