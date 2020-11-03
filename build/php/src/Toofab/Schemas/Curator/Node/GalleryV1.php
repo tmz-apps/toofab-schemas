@@ -1,9 +1,12 @@
 <?php
-// @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-1.json#
+// @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-2.json#
 namespace Toofab\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
+use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1 as GdbotsCommonLabelableV1;
 use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1Mixin as GdbotsCommonLabelableV1Mixin;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
@@ -72,8 +75,15 @@ final class GalleryV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:toofab:curator:node:gallery:1-0-1', __CLASS__,
-            [],
+        return new Schema('pbj:toofab:curator:node:gallery:1-0-2', __CLASS__,
+            [
+                /*
+                 * Visual layout for the page. e.g. "carousel", "list".
+                 */
+                Fb::create('layout', T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+            ],
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiCuratorGalleryV1Mixin::create(),

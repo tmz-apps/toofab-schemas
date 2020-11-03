@@ -1,6 +1,6 @@
 {
   "name": "@toofab/schemas",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Schemas for all Toofab apps and components.",
   "repository": {
     "type": "git",

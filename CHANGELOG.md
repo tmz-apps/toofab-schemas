@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.0.3
+* __Modify Schemas:__
+  * `toofab:curator:node:gallery` patch revision `1-0-2`
+    * Add `layout` string field with format slug.
+
+
 ## v1.0.2
 * Use `triniti/schemas` v1.1.12.
 
