@@ -1,9 +1,0 @@
-<?php
-// @link https://schemas.toofab.com/json-schema/toofab/curator/command/rename-timeline/latest.json#
-namespace Toofab\Schemas\Curator\Command;
-
-use Gdbots\Pbj\Message;
-
-interface RenameTimeline extends Message
-{
-}

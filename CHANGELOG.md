@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v2.0.0
+* Use `gdbots/schemas` v2.1.0.
+* Use `triniti/schemas` v2.0.1.
+
+
 ## v1.0.3
 * __Modify Schemas:__
   * `toofab:curator:node:gallery` patch revision `1-0-2`
