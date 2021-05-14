@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.0.4
+* Use `triniti/schemas` v1.1.15.
+
+
 ## v1.0.3
 * __Modify Schemas:__
   * `toofab:curator:node:gallery` patch revision `1-0-2`
