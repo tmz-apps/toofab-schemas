@@ -15,4 +15,5 @@ export default [
   'toofab:iam:node:ios-app:v1',
   'toofab:iam:node:slack-app:v1',
   'toofab:iam:node:sms-app:v1',
+  'toofab:iam:node:twitter-app:v1',
 ];

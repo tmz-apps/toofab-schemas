@@ -18,4 +18,5 @@ return [
     'toofab:notify:node:ios-notification:v1',
     'toofab:notify:node:slack-notification:v1',
     'toofab:notify:node:sms-notification:v1',
+    'toofab:notify:node:twitter-notification:v1',
 ];
