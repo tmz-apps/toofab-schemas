@@ -1,6 +1,4 @@
 // @link https://schemas.toofab.com/json-schema/toofab/curator/node/gallery/1-0-2.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
 import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
@@ -12,7 +10,6 @@ import GdbotsNcrSluggableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/sluggabl
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
 import TrinitiBoostSponsorableV1Mixin from '@triniti/schemas/triniti/boost/mixin/sponsorable/SponsorableV1Mixin';
 import TrinitiCommonAdvertisingV1Mixin from '@triniti/schemas/triniti/common/mixin/advertising/AdvertisingV1Mixin';
 import TrinitiCommonCustomCodeV1Mixin from '@triniti/schemas/triniti/common/mixin/custom-code/CustomCodeV1Mixin';
@@ -34,14 +31,7 @@ export default class GalleryV1 extends Message {
    */
   static defineSchema() {
     return new Schema('pbj:toofab:curator:node:gallery:1-0-2', GalleryV1,
-      [
-        /*
-         * Visual layout for the page. e.g. "carousel", "list".
-         */
-        Fb.create('layout', T.StringType.create())
-          .format(Format.SLUG)
-          .build(),
-      ],
+      [],
       [
         GdbotsNcrNodeV1Mixin.create(),
         TrinitiCuratorGalleryV1Mixin.create(),

@@ -4,14 +4,6 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:toofab:curator:node:gallery:1-0-2">
-    <fields>
-      <field name="layout" type="string" format="slug">
-        <description>
-          Visual layout for the page. e.g. "carousel", "list".
-        </description>
-      </field>
-    </fields>
-
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:curator:mixin:gallery:v1</curie-major>

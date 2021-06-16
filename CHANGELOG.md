@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.0.5
+* Use `gdbots/schemas` v1.6.7.
+* Use `triniti/schemas` v1.1.16.
+* __Add Schemas:__
+  * `toofab:iam:node:twitter-app`
+  * `toofab:notify:node:twitter-notification`
+
+
 ## v1.0.4
 * Use `triniti/schemas` v1.1.15.
 
