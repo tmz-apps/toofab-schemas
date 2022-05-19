@@ -4,6 +4,12 @@
   "description": "Schemas for all Toofab apps and components.",
   "type": "pbj-schema-store",
   "license": "Apache-2.0",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/tmz-apps/toofab-schemas"
+    }
+  ],
   "require": {
     "php": ">=8.1",
     "gdbots/schemas": "3.0.1",
