@@ -138,7 +138,7 @@ final class PageV1 extends AbstractMessage
                  * Visual layout for the page. e.g. "two-column", "one-column".
                  */
                 Fb::create('layout', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in
@@ -161,7 +161,7 @@ final class PageV1 extends AbstractMessage
                  * - CAN be changed, but in practice once nodes are published you should avoid it if possible
                  */
                 Fb::create('slug', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('sponsor_ref', T\NodeRefType::create())
                     ->build(),
@@ -231,7 +231,7 @@ final class PageV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('related_teasers_heading', T\StringType::create())
                     ->build(),
@@ -261,7 +261,7 @@ final class PageV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

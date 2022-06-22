@@ -129,7 +129,7 @@ final class VideoV1 extends AbstractMessage
                  * URL to the m3u8 for the live stream.
                  */
                 Fb::create('live_m3u8_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('is_full_episode', T\BooleanType::create())
                     ->build(),
@@ -188,7 +188,7 @@ final class VideoV1 extends AbstractMessage
                  */
                 Fb::create('caption_urls', T\TextType::create())
                     ->asAMap()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('tvpg_rating', T\StringEnumType::create())
                     ->className(TvpgRating::class)
@@ -197,7 +197,7 @@ final class VideoV1 extends AbstractMessage
                  * URL to the mezzanine video asset.
                  */
                 Fb::create('mezzanine_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * A reference to the mezzanine asset in DAM for this video.
@@ -209,7 +209,7 @@ final class VideoV1 extends AbstractMessage
                  */
                 Fb::create('source_urls', T\TextType::create())
                     ->asAMap()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * A tracking code for video clips that is used to correlate
@@ -222,7 +222,7 @@ final class VideoV1 extends AbstractMessage
                 Fb::create('original_air_date', T\DateTimeType::create())
                     ->build(),
                 Fb::create('show', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A reference to the audio asset for this video.
@@ -254,7 +254,7 @@ final class VideoV1 extends AbstractMessage
                  * URL to the source mp4 (generally a high-res/mezzanine file).
                  */
                 Fb::create('kaltura_mp4_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * A map containing the metadata profile values for the entry.
@@ -297,7 +297,7 @@ final class VideoV1 extends AbstractMessage
                  * - CAN be changed, but in practice once nodes are published you should avoid it if possible
                  */
                 Fb::create('slug', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('sponsor_ref', T\NodeRefType::create())
                     ->build(),
@@ -375,7 +375,7 @@ final class VideoV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS
