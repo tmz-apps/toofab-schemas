@@ -1,6 +1,6 @@
 {
   "name": "@toofab/schemas",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Schemas for all Toofab apps and components.",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "3.0.1",
-    "@triniti/schemas": "3.0.1"
+    "@triniti/schemas": "3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
