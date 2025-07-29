@@ -165,6 +165,7 @@ return [
     'toofab:taxonomy:command:rename-channel:v1',
     'toofab:taxonomy:command:update-category:v1',
     'toofab:taxonomy:command:update-channel:v1',
+    'triniti:apollo:command:add-reactions:v1',
     'triniti:apollo:command:cast-vote:v1',
     'triniti:curator:command:remove-teaser-slotting:v1',
     'triniti:curator:command:sync-teaser:v1',
@@ -184,5 +185,6 @@ return [
     'triniti:ovp.medialive:command:stop-channel:v1',
     'triniti:ovp:command:update-transcoding-status:v1',
     'triniti:ovp:command:update-transcription-status:v1',
+    'triniti:sys:command:inspect-seo:v1',
     'triniti:sys:command:purge-cache:v1',
 ];

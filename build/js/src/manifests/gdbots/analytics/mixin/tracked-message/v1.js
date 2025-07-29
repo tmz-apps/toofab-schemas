@@ -75,6 +75,7 @@ export default [
   'toofab:ovp:event:video-published:v1',
   'toofab:ovp:event:video-scheduled:v1',
   'toofab:ovp:event:video-unpublished:v1',
+  'triniti:apollo:event:reactions-added:v1',
   'triniti:apollo:event:vote-casted:v1',
   'triniti:dam:request:get-upload-urls-request:v1',
   'triniti:notify:event:notification-failed:v1',

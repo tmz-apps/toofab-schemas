@@ -174,6 +174,7 @@ export default [
   'toofab:taxonomy:event:channel-deleted:v1',
   'toofab:taxonomy:event:channel-renamed:v1',
   'toofab:taxonomy:event:channel-updated:v1',
+  'triniti:apollo:event:reactions-added:v1',
   'triniti:apollo:event:vote-casted:v1',
   'triniti:curator:event:gallery-image-count-updated:v1',
   'triniti:curator:event:teaser-slotting-removed:v1',
@@ -196,4 +197,5 @@ export default [
   'triniti:ovp:event:transcription-completed:v1',
   'triniti:ovp:event:transcription-failed:v1',
   'triniti:ovp:event:transcription-started:v1',
+  'triniti:sys:event:seo-inspected:v1',
 ];

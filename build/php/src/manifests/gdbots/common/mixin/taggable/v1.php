@@ -95,7 +95,9 @@ return [
     'toofab:people:node:person:v1',
     'toofab:taxonomy:node:category:v1',
     'toofab:taxonomy:node:channel:v1',
+    'triniti:apollo:command:add-reactions:v1',
     'triniti:apollo:command:cast-vote:v1',
+    'triniti:apollo:event:reactions-added:v1',
     'triniti:apollo:event:vote-casted:v1',
     'triniti:news:command:sync-facebook-instant-article:v1',
     'triniti:news:event:facebook-instant-article-synced:v1',
@@ -112,4 +114,5 @@ return [
     'triniti:ovp:event:transcription-completed:v1',
     'triniti:ovp:event:transcription-failed:v1',
     'triniti:ovp:event:transcription-started:v1',
+    'triniti:sys:event:seo-inspected:v1',
 ];
