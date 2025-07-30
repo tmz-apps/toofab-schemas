@@ -48,6 +48,7 @@ return [
     'toofab:iam:event:user-updated:v1',
     'toofab:news:event:article-locked:v1',
     'toofab:news:event:article-unlocked:v1',
+    'triniti:apollo:event:reactions-added:v1',
     'triniti:apollo:event:vote-casted:v1',
     'triniti:dam:request:get-upload-urls-request:v1',
 ];

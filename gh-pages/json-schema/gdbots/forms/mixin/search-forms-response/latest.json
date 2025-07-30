@@ -193,6 +193,9 @@
         },
         {
           "$ref": "https://schemas.toofab.com/json-schema/gdbots/forms/mixin/form/1-0-3.json#"
+        },
+        {
+          "$ref": "https://schemas.toofab.com/json-schema/gdbots/forms/mixin/form/1-0-4.json#"
         }
       ]
     }
