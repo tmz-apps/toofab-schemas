@@ -17,26 +17,33 @@ while read -r branch; do
   fi
 done < <(git branch --format='%(refname:short)')
 
-
 if [ -z "$(git ls-remote origin gh-pages)" ]; then
   echo 'remote gh-pages branch does not exist, bailing out'
   exit 1
 fi
 
 git fetch origin
-git switch gh-pages
-git merge --no-edit origin/main || exit 1
 
-for DIR in $(find ./gh-pages -type d); do
+find ./gh-pages -type d | while read DIR; do
   (
-    echo "<html>\n<body>\n<h1>Toofab Schemas</h1>\n<hr/>\n<pre>"
+    echo -e "<html>\n<body>\n<h1>Toofab Schemas</h1>\n<hr/>\n<pre>"
     ls -1pa "${DIR}" | egrep "(../|json)" | grep -v "^\./$" | grep -v "index.html" | awk '{ printf "<a href=\"%s\">%s</a>\n",$1,$1 }'
-    echo "</pre>\n</body>\n</html>"
+    echo -e "</pre>\n</body>\n</html>"
   ) > "${DIR}/index.html"
 done
 
+staging_area=$(mktemp -d)
+mv ./gh-pages/* "${staging_area}"
+
+git checkout -- .
+git clean -fd
+
+git switch gh-pages
+find . -maxdepth 1 ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+mv "${staging_area}"/* ./
+
 git add -A
-git commit -m "Updated gh-pages directory listing"
+git commit -m "gh-pages"
 git push origin gh-pages
 git checkout main
 git branch -D gh-pages
